@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'
+import '../css/CharacterDetail.css';
 
 const CharacterDetail = props => {
 	
@@ -10,17 +11,17 @@ const CharacterDetail = props => {
 
 	if (charId > characters.length) {
 		return (
-			<React.Fragment>
+			<div className="detail__box">
 				<Link to ="/" className="app__go-back">volver</Link>
 				<p className="error_message">Actualmente sólo hay 20 personajes.</p>
-			</React.Fragment>
+			</div>
 		);
 	}
 
 	if (character[0]) {
 		const {image, name, status, origin, episode} = character[0];
 		return(
-			<React.Fragment>
+			<div className="detail__box">
 				<Link to ="/" className="app__go-back">volver</Link>
 				<div className="character__detail">
 					<div className="detail__image">
@@ -31,16 +32,16 @@ const CharacterDetail = props => {
 					<p className="detail__origin"><strong>Origin:</strong> {origin.name}</p>
 					<p className="detail_episodes"><strong>Episodes:</strong> {episode.length}</p>
 				</div>
-			</React.Fragment>	
+			</div>	
 	);
 	} else {
 
 	}
 	return(
-		<React.Fragment>
+		<div className="detail__box">
 			<Link to ="/" className="app__go-back">volver</Link>
 			<p className="error_message"> Ese personaje no está actualmente registrado</p>
-		</React.Fragment>	
+		</div>	
 	);
 }
 

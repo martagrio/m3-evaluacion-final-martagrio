@@ -10,8 +10,8 @@
 	box-sizing: border-box;
 	background-position: 50%;
 	overflow: hidden;
-	margin: 0;
+	margin: 60px 0;
 	height: 1px;
-	width: 500px;
-	padding-top: 200px;
+	width: 400px;
+	padding-top: 90px;
 }
