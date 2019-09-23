@@ -6,7 +6,7 @@ const Filters = props => {
 	const {getQuery, query} = props;
 	return(
 		<div className="app__search">
-			<label for="query"></label>
+			<label htmlFor="query"></label>
 			<input className="app__input"
 				id = "query" 
 				type="text" 

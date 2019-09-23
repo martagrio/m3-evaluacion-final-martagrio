@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CharacterData from './CharacterCard';
+import CharacterCard from './CharacterCard';
+import {Link} from 'react-router-dom';
 
 const CharacterList = props => {
 	const {characters, query} = props;
@@ -11,11 +12,13 @@ const CharacterList = props => {
 				.map( chac => {
 					return (
 						<li className="character" key={chac.id}>
-							<CharacterData 
-								image = {chac.image}
-								name = {chac.name}
-								species = {chac.species}
-							/>
+							<Link to={`/detail/${chac.id}`} className="character__link">
+								<CharacterCard 
+									image = {chac.image}
+									name = {chac.name}
+									species = {chac.species}
+								/>
+							</Link>
 						</li>
 					);
 			})}
