@@ -1,0 +1,18 @@
+.characters__list{
+	list-style: none;
+	padding: 0;
+	margin-top: 50px;
+	display: grid;
+	grid-template-rows: repeat(auto, auto-fit);
+	grid-template-columns: repeat(4, auto);
+	grid-column-gap: 20px;
+}
+.character {
+ width: 100%;
+ text-align: left;
+}
+
+.character__link{
+	color: white;
+	text-decoration: none;
+}

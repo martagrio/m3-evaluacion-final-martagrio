@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 const CharacterDetail = props => {
 	
 	const {routerProps, characters} = props;
-
 	const charId = parseInt(routerProps.match.params.charId);
 	const character = characters.filter(item => item.id === charId);
 
@@ -28,9 +27,9 @@ const CharacterDetail = props => {
 						<img src={image} alt={name} />
 					</div>
 					<h2 className="detail__name">{name}</h2>
-					<p className="detail__status">Status: {status}</p>
-					<p className="detail__origin">Origin: {origin.name}</p>
-					<p className="detail_episodes">Episodes: {episode.length}</p>
+					<p className="detail__status"><strong>Status:</strong> {status}</p>
+					<p className="detail__origin"><strong>Origin:</strong> {origin.name}</p>
+					<p className="detail_episodes"><strong>Episodes:</strong> {episode.length}</p>
 				</div>
 			</React.Fragment>	
 	);
