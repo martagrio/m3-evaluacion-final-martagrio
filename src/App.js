@@ -2,6 +2,7 @@ import React from 'react';
 import {fetchCharacters} from './services/characters';
 import Header from './components/Header';
 import Landing from './components/Landing';
+import CharacterDetail from './components/CharacterDetail';
 import {Route, Switch} from 'react-router-dom';
 
 import './App.css';
@@ -44,11 +45,21 @@ class App extends React.Component {
     return (
       <div className="app">
 				<Header />
-				<Landing 
-					getQuery = {this.getQuery}
-					characters = {characters}
-					query = {query}
-				/>
+				<Switch>
+					<Route exact path="/" render={() => {
+						return(
+						<Landing 
+							getQuery = {this.getQuery}
+							characters = {characters}
+							query = {query}
+					  />
+						);
+					}}/>
+					
+					<Route path="character-detail"  />
+
+					<CharacterDetail />
+				</Switch>
       </div>
     );
   }
