@@ -3,6 +3,7 @@ import {fetchCharacters} from './services/characters';
 import Header from './components/Header';
 import Filters from './components/Filters';
 import CharacterList from './components/CharacterList';
+import {Route, Switch} from 'react-router-dom';
 
 import './App.css';
 import './css/Header.css'

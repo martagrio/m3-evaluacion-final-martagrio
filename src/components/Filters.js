@@ -6,7 +6,9 @@ const Filters = props => {
 	const {getQuery, query} = props;
 	return(
 		<div className="app__search">
-			<input className="app__input" 
+			<label for="query"></label>
+			<input className="app__input"
+				id = "query" 
 				type="text" 
 				onChange = {getQuery} 
 				value={query}
