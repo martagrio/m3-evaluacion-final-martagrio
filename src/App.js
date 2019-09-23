@@ -1,7 +1,7 @@
 import React from 'react';
 import {fetchCharacters} from './services/characters';
 import Header from './components/Header';
-import Filter from './components/Filter';
+import Filters from './components/Filters';
 import CharacterList from './components/CharacterList';
 
 import './App.css';
@@ -45,7 +45,7 @@ class App extends React.Component {
       <div className="app">
 				<Header />
 				<main className="app__main">
-					<Filter 
+					<Filters 
 						getQuery = {this.getQuery}
 						query = {query}	
 					/>
@@ -53,7 +53,6 @@ class App extends React.Component {
 						characters = {characters} 
 						query = {query}
 					/>
-
 				</main>
       </div>
     );

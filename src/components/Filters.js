@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Filter = props => {
+const Filters = props => {
 	const {getQuery, query} = props;
 	return(
 		<div className="app__search">
@@ -15,8 +15,8 @@ const Filter = props => {
 	);
 }
 
-Filter.propTypes = {
+Filters.propTypes = {
 	getQuery: PropTypes.func.isRequired,
 	query: PropTypes.string.isRequired
 }
-export default Filter;
+export default Filters;

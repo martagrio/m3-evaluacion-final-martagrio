@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CharacterData from './CharacterCard';
 
 const CharacterList = props => {
 	const {characters, query} = props;
@@ -10,11 +11,11 @@ const CharacterList = props => {
 				.map( chac => {
 					return (
 						<li className="character" key={chac.id}>
-							<div className="character__img">
-								<img src={chac.image} alt={chac.name}/>
-							</div>
-							<h2 className="chacracter__name">{chac.name}</h2>
-							<h3 className="character__species">{chac.species}</h3>
+							<CharacterData 
+								image = {chac.image}
+								name = {chac.name}
+								species = {chac.species}
+							/>
 						</li>
 					);
 			})}
@@ -22,7 +23,7 @@ const CharacterList = props => {
 	);
 }
 CharacterList.propTypes = {
-	characters: PropTypes.array.isRequired,
+	characters: PropTypes.arrayOf(PropTypes.object).isRequired,
 	query: PropTypes.string.isRequired
 }
 export default CharacterList;
