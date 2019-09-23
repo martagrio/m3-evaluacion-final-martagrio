@@ -1,8 +1,7 @@
 import React from 'react';
 import {fetchCharacters} from './services/characters';
 import Header from './components/Header';
-import Filters from './components/Filters';
-import CharacterList from './components/CharacterList';
+import Landing from './components/Landing';
 import {Route, Switch} from 'react-router-dom';
 
 import './App.css';
@@ -45,16 +44,11 @@ class App extends React.Component {
     return (
       <div className="app">
 				<Header />
-				<main className="app__main">
-					<Filters 
-						getQuery = {this.getQuery}
-						query = {query}	
-					/>
-					<CharacterList
-						characters = {characters} 
-						query = {query}
-					/>
-				</main>
+				<Landing 
+					getQuery = {this.getQuery}
+					characters = {characters}
+					query = {query}
+				/>
       </div>
     );
   }
