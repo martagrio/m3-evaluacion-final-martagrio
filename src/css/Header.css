@@ -1,0 +1,17 @@
+.app__header {
+	display: flex;
+	justify-content: center;
+}
+
+.app__title {
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	box-sizing: border-box;
+	background-position: 50%;
+	overflow: hidden;
+	margin: 0;
+	height: 1px;
+	width: 500px;
+	padding-top: 200px;
+}
