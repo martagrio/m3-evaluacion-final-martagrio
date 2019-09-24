@@ -25,9 +25,19 @@
 }
 .detail__text {
 	padding-left: 20px;
+	font-size: 16px;
 	text-align: left;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-		background-color: rgb(9, 186, 240);
+	background-color: rgb(9, 186, 240);
+}
+
+.detail__name {
+		font-size: 20px;
+		font-weight: bold;
+}
+
+.detail__name, .detail__status, .detail__origin, .detail_episodes {
+	margin: 5px 0;
 }
