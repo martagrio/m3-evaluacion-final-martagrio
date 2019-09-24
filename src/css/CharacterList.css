@@ -3,16 +3,29 @@
 	padding: 0;
 	margin-top: 50px;
 	display: grid;
- 	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+ 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
  	grid-gap: 1rem;
+	justify-content: center;
 }
 .character {
- width: 100%;
  text-align: left;
- max-width: 200px;
+ max-width: 300px;
 }
 
 .character__link{
 	color: white;
 	text-decoration: none;
+}
+
+.chacracter__name {
+	padding-top: 10px;
+	padding-left: 10px;
+	margin: 0;
+}
+
+.character__species {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin: 0;
 }
