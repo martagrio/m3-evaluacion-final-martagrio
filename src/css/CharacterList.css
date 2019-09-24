@@ -9,6 +9,7 @@
 .character {
  width: 100%;
  text-align: left;
+ max-width: 200px;
 }
 
 .character__link{
