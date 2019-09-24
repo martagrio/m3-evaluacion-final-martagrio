@@ -10,8 +10,7 @@ const CharacterCard = props => {
 				<img src={image} alt={name}/>
 			</div>
 			<h2 className="chacracter__name">{name}</h2>
-			<h3 className="character__species">{species} { }  
-				 {(species === 'Human') ? <i className="fas fa-restroom"></i> : <i className="fab fa-reddit-alien"></i>}
+			<h3 className="character__species">{species} {(species === 'Human') ? <i className="fas fa-restroom"></i> : <i className="fab fa-reddit-alien"></i>}
 			</h3>
 		</div>
 	);
