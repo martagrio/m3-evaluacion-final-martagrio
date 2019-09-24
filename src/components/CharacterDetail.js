@@ -25,14 +25,14 @@ const CharacterDetail = props => {
 				<Link to ="/" className="app__go-back">{`< back`}</Link>
 				<div className="character__detail">
 					<div className="detail__image">
-						<img src={image} alt={name} />
+						<img src={image} alt={name} className="detail__img"/>
 					</div>
-					<h2 className="detail__name">{name}</h2>
-
-					<p className="detail__status"><strong>Status:</strong> {(status === 'Dead') ? <i className="fas fa-skull-crossbones"></i> : `${status}`}</p>
-
-					<p className="detail__origin"><strong>Origin:</strong> {origin.name}</p>
-					<p className="detail_episodes"><strong>Episodes:</strong> {episode.length}</p>
+					<div className="detail__text">
+						<h2 className="detail__name">{name}</h2>
+						<p className="detail__status"><strong>Status:</strong> {(status === 'Dead') ? <i className="fas fa-skull-crossbones"></i> : `${status}`}</p>
+						<p className="detail__origin"><strong>Origin:</strong> {origin.name}</p>
+						<p className="detail_episodes"><strong>Episodes:</strong> {episode.length}</p>
+					</div>
 				</div>
 			</div>	
 	);

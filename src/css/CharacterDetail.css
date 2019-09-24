@@ -1,12 +1,33 @@
 .detail__box{
-	text-align: right;
-	display: grid;
-	grid-template-rows: fr fr;
-	grid-template-columns: repeat(3, fr);
+	display: flex;
+	flex-direction: column;
 }
 
 .app__go-back {
 	color: white;
 	text-decoration: none;
 	text-align: right;
+}
+
+.character__detail {
+	display: flex;
+	margin-top: 10px;
+	background-color: rgb(9, 186, 240);
+}
+
+.detail__image {
+	padding: 20px;
+	display: flex;
+}
+
+.detail__img {
+	width: 100%;
+}
+.detail__text {
+	padding-left: 20px;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+		background-color: rgb(9, 186, 240);
 }
