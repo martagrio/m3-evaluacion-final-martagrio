@@ -1,8 +1,18 @@
 .detail__box{
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 
+.detail__error {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.error_message {
+	width: 250px;
+}
 .app__go-back {
 	color: white;
 	text-decoration: none;

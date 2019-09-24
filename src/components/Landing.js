@@ -2,7 +2,6 @@ import React from 'react';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import PropTypes from 'prop-types';
-import '../css/Landing.css';
 
 const Landing = props => {
 

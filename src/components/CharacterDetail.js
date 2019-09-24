@@ -11,7 +11,7 @@ const CharacterDetail = props => {
 
 	if (charId > characters.length) {
 		return (
-			<div className="detail__box">
+			<div className="detail__error">
 				<Link to ="/" className="app__go-back">{`< back`}</Link>
 				<p className="error_message">Actualmente sólo hay 20 personajes.</p>
 			</div>
@@ -40,7 +40,7 @@ const CharacterDetail = props => {
 
 	}
 	return(
-		<div className="detail__box">
+		<div className="detail__error">
 			<Link to ="/" className="app__go-back">{`< back`}</Link>
 			<p className="error_message"> Ese personaje no está actualmente registrado</p>
 		</div>	
