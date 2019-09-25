@@ -14,10 +14,12 @@ class App extends React.Component {
 
 		this.state = {
 			characters: [],
-			query: ''
+			query: '',
+			location: ''
 		}
 
 		this.getQuery = this.getQuery.bind(this);
+		this.getLocation = this.getLocation.bind(this);
   }
 
 	componentDidMount() {
@@ -37,11 +39,18 @@ class App extends React.Component {
 		const userQuery = event.currentTarget.value;
 		this.setState({
 			query: userQuery
-		})
+		});
 	}
 
+	getLocation(event) {
+		const newLocation = event.currentTarget.value;
+		this.setState({
+			location: newLocation
+		});
+	} 
+
   render() {
-		const {characters, query} = this.state;
+		const {characters, query, location} = this.state;
     return (
       <div className="app">
 				<Header />
@@ -52,6 +61,8 @@ class App extends React.Component {
 							getQuery = {this.getQuery}
 							characters = {characters}
 							query = {query}
+							location = {location}
+							getLocation = {this.getLocation}
 					  />
 						);
 					}}/>

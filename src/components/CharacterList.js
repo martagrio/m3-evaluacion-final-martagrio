@@ -5,10 +5,11 @@ import {Link} from 'react-router-dom';
 import '../css/CharacterList.css';
 
 const CharacterList = props => {
-	const {characters, query} = props;
+	const {characters, query, location} = props;
 	return(
 		<ul className="characters__list">
 			{characters
+			.filter (searched => searched.location.name.toLowerCase().includes(location.toLowerCase()))
 				.filter(searched => searched.name.toLowerCase().includes(query.toLowerCase()))
 				.map( chac => {
 					return (
@@ -28,6 +29,7 @@ const CharacterList = props => {
 }
 CharacterList.propTypes = {
 	characters: PropTypes.arrayOf(PropTypes.object).isRequired,
-	query: PropTypes.string.isRequired
+	query: PropTypes.string.isRequired,
+	location: PropTypes.string.isRequired
 }
 export default CharacterList;
