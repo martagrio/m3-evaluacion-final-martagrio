@@ -8,13 +8,13 @@ const Filters = props => {
 	return(
 		<React.Fragment>
 		<div className="app__search">
-			<label htmlFor="query"></label>
-			<input className="app__input"
-				id = "query" 
-				type="text" 
-				onChange = {getQuery} 
-				value={query}
-				placeholder = "Please, enter the name of the desired character" />
+			<label htmlFor="query">Name: </label>
+				<input className="app__input"
+					id = "query" 
+					type="text" 
+					onChange = {getQuery} 
+					value={query}
+					placeholder = "Please, enter the name of the desired character" />
 			</div>
 			<div className="search__planet">
 				<label htmlFor="location">Location: </label>
